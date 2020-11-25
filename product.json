@@ -1,0 +1,120 @@
+[{
+  "_id": {
+    "$oid": "5fb76af73620d78d26bb341c"
+  },
+  "name": "G635",
+  "brand": "Logitech",
+  "price": 1700000,
+  "categories": "Headset",
+  "countInStock": 3,
+  "description": "Ini deskripsi",
+  "img": "../img/Audio/g635.png",
+  "createdAt": {
+    "$date": "2020-11-22T04:16:10.227Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-23T05:36:33.561Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fb7d8c3bbd69c13346c4345"
+  },
+  "price": 5000000,
+  "countInStock": 5,
+  "name": "Artics 7 White",
+  "img": "../img/Audio/STEELSERIES-Arctis-7-White-Merchant--3315985644-2017314145443.png",
+  "brand": "Steelseries",
+  "categories": "Headset",
+  "description": "Ini deskripsi",
+  "createdAt": {
+    "$date": "2020-11-20T14:54:59.978Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-20T14:54:59.978Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fb7e42ebbd69c13346c4346"
+  },
+  "price": 975000,
+  "countInStock": 2,
+  "name": "VIGOR GK50",
+  "img": "../img/Keyboard/VIGORGK50.png",
+  "brand": "MSI",
+  "categories": "Keyboard",
+  "description": "Ini deskripsi",
+  "createdAt": {
+    "$date": "2020-11-20T15:43:42.264Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-22T06:03:11.923Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fbb5ee49490a319acb42e88"
+  },
+  "price": 123123,
+  "countInStock": 5,
+  "name": "OPTIX MAG322CQ",
+  "img": "../img/Monitor/OPTIXMAG322CQR.png",
+  "brand": "MSI",
+  "categories": "Monitor",
+  "description": "Ini Monitor",
+  "createdAt": {
+    "$date": "2020-11-23T07:04:04.221Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-23T12:32:26.724Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fbbaedfc055032e8ce103d2"
+  },
+  "price": 975000,
+  "countInStock": 4,
+  "name": "DS502",
+  "img": "../img/Audio/DS502.png",
+  "brand": "MSI",
+  "categories": "Audio",
+  "description": "Ini headset",
+  "createdAt": {
+    "$date": "2020-11-23T12:45:19.886Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-23T12:45:19.886Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fbbaf1cc055032e8ce103d3"
+  },
+  "price": 500000,
+  "countInStock": 5,
+  "name": "G332",
+  "img": "../img/Audio/g233-prodigy.png",
+  "brand": "Logitech",
+  "categories": "Audio",
+  "description": "Ini Headset",
+  "createdAt": {
+    "$date": "2020-11-23T12:46:20.101Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-23T12:46:20.101Z"
+  }
+},{
+  "_id": {
+    "$oid": "5fbbaf69c055032e8ce103d4"
+  },
+  "price": 1000000,
+  "countInStock": 5,
+  "name": "O MIN WHITE",
+  "img": "../img/Mouse/ominwhite.png",
+  "brand": "Glorious",
+  "categories": "Mouse",
+  "description": "Ini Mouse",
+  "createdAt": {
+    "$date": "2020-11-23T12:47:37.913Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-23T12:47:37.913Z"
+  }
+}]

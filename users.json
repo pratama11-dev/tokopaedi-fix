@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "5fb76294a3586830fc788409"
+  },
+  "isAdmin": true,
+  "name": "admin",
+  "email": "admin@gmail.com",
+  "password": "admin",
+  "createdAt": {
+    "$date": "2020-11-20T06:30:44.876Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-20T06:30:44.876Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fb7636a13fa2c39188ef30b"
+  },
+  "isAdmin": false,
+  "name": "user1",
+  "email": "user1@gmail.com",
+  "password": "user1",
+  "createdAt": {
+    "$date": "2020-11-20T06:34:19.009Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-20T06:34:19.009Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fb7c955eae0f81eb4b70368"
+  },
+  "isAdmin": false,
+  "name": "user2",
+  "email": "user2@gmail.com",
+  "password": "user2",
+  "createdAt": {
+    "$date": "2020-11-20T13:49:09.909Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-20T13:49:09.909Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "5fba0b240bef55136c397b16"
+  },
+  "isAdmin": false,
+  "name": "user3",
+  "email": "user3@gmail.com",
+  "password": "user3",
+  "createdAt": {
+    "$date": "2020-11-22T06:54:28.458Z"
+  },
+  "updatedAt": {
+    "$date": "2020-11-22T06:54:28.458Z"
+  },
+  "__v": 0
+}]
