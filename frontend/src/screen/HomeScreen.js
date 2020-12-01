@@ -42,7 +42,7 @@ function HomeScreen(props) {
                   <br />- ClearCast , the Best Mic in Gaming
                   <br />- DTS Headphone:X 7.1 Surround Sound
                   <br />- AirWeave Ear Cushions</p>
-                <Link to={'/product/5fbbaedfc055032e8ce103d2'} className="btn">Detail → </Link>
+                <Link to={'/product/5fb7d8c3bbd69c13346c4345'} className="btn">Detail → </Link>
               </div>
               <div className="col-2">
                 <img src="../img/Audio/STEELSERIES-Arctis-7-White-Merchant--3315985644-2017314145443.png" alt="" />
