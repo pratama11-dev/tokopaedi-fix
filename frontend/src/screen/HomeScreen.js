@@ -159,7 +159,7 @@ function HomeScreen(props) {
                 </small>
                 <h1>MODEL O</h1>
                 <a href className="btn">
-                  <Link to={'/product/5fbbaf69c055032e8ce103d4'} className="fas fa-shopping-cart"><ShoppingCartOutlined /> Buy Now</Link>
+                  <Link to={'/product/5fc6488a7275f30004b73508'} ><ShoppingCartOutlined /> Buy Now</Link>
                 </a>
               </div>
             </div>
