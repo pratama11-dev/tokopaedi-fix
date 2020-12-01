@@ -1,1 +1,1 @@
-web: node --exprimental-modules backend/server.js
+web: node dist/server.js 
