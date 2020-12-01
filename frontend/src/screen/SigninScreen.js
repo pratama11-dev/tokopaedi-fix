@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux'
 import { signin } from '../actions/userAction';
+import LoadingBox from '../components/LoadingBox';
+import MessageBox from '../components/MessageBox';
 
 
 
@@ -21,7 +23,7 @@ function SigninScreen(props) {
         return () => {
             //
         };
-    }, [userInfo]);
+    }, [props.history,userInfo,redirect]);
 
     const submitHandler = (e) =>{
         e.preventDefault();
@@ -34,8 +36,8 @@ function SigninScreen(props) {
                     <h2>Sign-in</h2>
                 </li>
                 <li>
-                    {loading && <div>Loading...</div>}
-                    {error && <div>{error}</div>}
+                    {loading && <LoadingBox></LoadingBox>}
+                    {error && <MessageBox variant="danger">{error}</MessageBox>}
                 </li>
                 <li>
                     <label htmlFor="email">

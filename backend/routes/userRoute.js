@@ -1,6 +1,7 @@
 import express from 'express';
+import expressAsyncHandler from 'express-async-handler';
 import User from '../models/userModel';
-import { getToken } from '../util'
+import { getToken, isAuth, isAdmin  } from '../util'
 
 const router = express.Router();
 
@@ -45,6 +46,49 @@ router.post('/register', async(req, res) =>{
   }
 
 })
+
+router.get(
+  '/:id',
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.params.id);
+    if (user) {
+      res.send(user);
+    } else {
+      res.status(404).send({ message: 'User Not Found' });
+    }
+  })
+);
+
+router.put(
+  '/profile',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const user = await User.findById(req.user._id);
+    if (user) {
+      user.name = req.body.name || user.name;
+      user.email = req.body.email || user.email;
+      user.password = req.body.password || user.password;
+      const updatedUser = await user.save();
+      res.send({
+        _id: updatedUser._id,
+        name: updatedUser.name,
+        email: updatedUser.email,
+        isAdmin: updatedUser.isAdmin,
+        token: getToken(updatedUser),
+      });
+    }
+  })
+);
+
+router.get(
+  '/',
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const users = await User.find({});
+    res.send(users);
+  })
+);
 
 router.get("/createadmin", async (req, res) => {
   try {

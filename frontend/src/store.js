@@ -1,20 +1,67 @@
-import {createStore, combineReducers, applyMiddleware, compose} from 'redux';
-import { productDeleteReducer, productDetailsReducer, productListReducer, productSaveReducer } from './reducers/productReducers';
 import thunk from 'redux-thunk';
 import Cookie from 'js-cookie';
-import {cartReducer} from './reducers/cartReducers';
-import { userRegisterReducer, userSigninReducer } from './reducers/userReducers';
+import { cartReducer} from './reducers/cartReducers';
+import {
+  orderCreateReducer,
+  orderDeleteReducer,
+  orderDeliverReducer,
+  orderDetailsReducer,
+  orderListReducer,
+  orderMineListReducer,
+  orderPayReducer,
+} from './reducers/orderReducers';
+import {
+  productCategoryListReducer,
+  productCreateReducer,
+  productDeleteReducer,
+  productDetailsReducer,
+  productListReducer,
+  productSaveReducer,
+  productUpdateReducer,
+} from './reducers/productReducers';
+import { createStore, 
+  combineReducers, 
+  applyMiddleware, 
+  compose} 
+  from 'redux';
+import { 
+  userRegisterReducer, 
+  userSigninReducer,
+  userDeleteReducer,
+  userDetailsReducer,
+  userListReducer,
+  userTopSellerListReducer,
+  userUpdateProfileReducer,
+  userUpdateReducer, } 
+  from './reducers/userReducers';
+
 
 const cartItems = Cookie.getJSON("cartItems") || [];
 const userInfo  = Cookie.getJSON("userInfo") || null;
 
-const initialState = { cart: { cartItems }, userSignin: {userInfo}};
+const initialState = { cart: { cartItems }, userSignin: {userInfo} };
 const reducer = combineReducers({
   productList: productListReducer,
   productDetails: productDetailsReducer,
   cart: cartReducer,
   userSignin: userSigninReducer,
   userRegister: userRegisterReducer,
+  orderCreate: orderCreateReducer,
+  orderDetails: orderDetailsReducer,
+  orderPay: orderPayReducer,
+  orderMineList: orderMineListReducer,
+  userDetails: userDetailsReducer,
+  userUpdateProfile: userUpdateProfileReducer,
+  userUpdate: userUpdateReducer,
+  productCreate: productCreateReducer,
+  productUpdate: productUpdateReducer,
+  orderList: orderListReducer,
+  orderDelete: orderDeleteReducer,
+  orderDeliver: orderDeliverReducer,
+  userList: userListReducer,
+  userDelete: userDeleteReducer,
+  userTopSellersList: userTopSellerListReducer,
+  productCategoryList: productCategoryListReducer,
   productSave: productSaveReducer,
   productDelete: productDeleteReducer
 })

@@ -58,7 +58,9 @@ function ProductsScreen(props) {
     }
 
     const deleteHandler = (product) => {
-        dispatch(deleteProduct(product._id));
+        if (window.confirm('Are you sure to delete?')) {
+            dispatch(deleteProduct(product._id));
+        }
     }
 
     return <div className="content content-margined">

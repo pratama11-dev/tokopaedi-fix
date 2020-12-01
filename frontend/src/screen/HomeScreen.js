@@ -5,6 +5,9 @@ import { listProducts } from '../actions/productActions';
 import {
   ShoppingCartOutlined,
 } from '@ant-design/icons';
+import { listProductCategories } from '../actions/productActions';
+// import LoadingBox from '../components/LoadingBox';
+// import MessageBox from '../components/MessageBox';
 
 
 function HomeScreen(props) {
@@ -13,14 +16,20 @@ function HomeScreen(props) {
   const { products, loading, error } = productList;
   const dispatch = useDispatch();
   
+  // const productCategoryList = useSelector((state) => state.productCategoryList);
+  // const {
+  //   loading: loadingCategories,
+  //   error: errorCategories,
+  //   categories,
+  // } = productCategoryList;
 
   useEffect(() => {
     dispatch(listProducts());
-
+    dispatch(listProductCategories())
     return () => {
       //
     };
-  }, []);
+  }, [dispatch]);
 
     return loading ? <div>Loading...</div> :
     error ? <div>{error}</div> : <>
@@ -83,11 +92,26 @@ function HomeScreen(props) {
           <div className="categories">
             <div className="small-container">
               <div className="row">
+              {/* {loadingCategories ? (
+              <LoadingBox></LoadingBox>
+                ) : errorCategories ? (
+                  <MessageBox variant="danger">{errorCategories}</MessageBox>
+                ) : (
+                  categories.map((c) => (
+                    <li key={c}>
+                      <Link
+                        to={`/search/categories/${c}`}
+                      >
+                        {c}
+                      </Link>
+                    </li>
+                  ))
+                )} */}
                 <div className="col-3">
                   <img src="../img/Monitor/OPTIXMAG322CQR.png" alt="" />
                   <div className="btn">
                   <Link to={'/Allscreen'}>Monitor →</Link>
-              </div>
+                </div>
                 </div>
                 <div className="col-3">
                   <img src="../img/Audio/g635.png" alt="" />
