@@ -56,7 +56,7 @@ function App() {
                 {userInfo ? (
                 <div className="dropdown">
                   <Link to="#">
-                    <UserOutlined /><p>Hi, {userInfo.name}</p><i className="fa fa-caret-down"></i>{' '}
+                    <UserOutlined /><p>Hi, {userInfo.name}</p>{' '}
                   </Link>
                   <ul className="dropdown-content">
                     <li>
@@ -78,7 +78,7 @@ function App() {
                 {userInfo && userInfo.isAdmin && (
                   <div className="dropdown">
                     <Link to="#admin">
-                      <UserOutlined /><p>Hi,{userInfo.name} </p><i className="fa fa-caret-down"></i>
+                      <UserOutlined /><p>Only {userInfo.name} </p><i className="fa fa-caret-down"></i>
                     </Link>
                     <ul className="dropdown-content">
                       <li>
@@ -226,6 +226,10 @@ function App() {
                     </a>
                     <a href="https://www.instagram.com/mivhiii/">
                       <InstagramOutlined /> mivhiii
+                      <br />
+                    </a>
+                    <a href="https://www.instagram.com/muhamadpauji/">
+                      <InstagramOutlined /> muhamadpauji
                       <br />
                     </a>
                   </div>
