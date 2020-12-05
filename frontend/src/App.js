@@ -95,10 +95,7 @@ function App() {
                       </li>
                     </ul>
                   </div>
-                )}
-              <Link to="/placeorder">
-                <ProfileOutlined />
-              </Link>                
+                )}             
               <Link to="/cart">
                 <ShoppingCartOutlined /> 
                 {cartItems.length > 0 && (
