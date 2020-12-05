@@ -17,12 +17,14 @@ export default function UserListScreen(props) {
   } = userDelete;
 
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(listUsers());
     dispatch({
       type: USER_DETAILS_RESET,
     });
   }, [dispatch, successDelete]);
+  
   const deleteHandler = (user) => {
     if (window.confirm('Are you sure?')) {
       dispatch(deleteUser(user._id));

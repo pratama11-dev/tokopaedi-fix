@@ -78,7 +78,7 @@ function App() {
                 {userInfo && userInfo.isAdmin && (
                   <div className="dropdown">
                     <Link to="#admin">
-                      <UserOutlined /><p>Only {userInfo.name} </p><i className="fa fa-caret-down"></i>
+                      <UserOutlined /><p>Only Admin </p><i className="fa fa-caret-down"></i>
                     </Link>
                     <ul className="dropdown-content">
                       <li>
