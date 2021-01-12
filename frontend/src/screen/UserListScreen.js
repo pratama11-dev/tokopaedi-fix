@@ -63,14 +63,14 @@ export default function UserListScreen(props) {
                 <td>
                   <button
                     type="button"
-                    className="small"
+                    className="buttontbl"
                     onClick={() => props.history.push(`/user/${user._id}/edit`)}
                   >
                     Edit
                   </button>
                   <button
                     type="button"
-                    className="small"
+                    className="buttontbl"
                     onClick={() => deleteHandler(user)}
                   >
                     Delete
