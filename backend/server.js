@@ -7,6 +7,8 @@ import bodyParser from 'body-parser'
 import userRoute from './routes/userRoute'
 import productRoute from './routes/productRoute'
 import orderRouter from './routes/orderRoute';
+import uploadRouter from './routes/uploadRoute';
+
 
 dotenv.config();
 
@@ -27,6 +29,7 @@ app.use(bodyParser.json())
 app.use("/api/users", userRoute);
 app.use("/api/products", productRoute);
 app.use('/api/orders', orderRouter);
+app.use('/api/uploads', uploadRouter);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
