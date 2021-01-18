@@ -309,6 +309,10 @@ img.large {
 .card-body > * {
   margin-bottom: 0.5rem;
 }
+.card-body h2 {
+  margin-right: 10px;
+}
+
 .price {
   font-size: 2rem;
 }

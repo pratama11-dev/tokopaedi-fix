@@ -123,7 +123,7 @@ function PlaceOrderScreen(props){
                         <strong>Rp.{totalPrice}</strong>
                     </li>
                     <li>
-                        <button className="button primary full-width" onClick={placeOrderHandler} 
+                        <button className="button" onClick={placeOrderHandler} 
                         disabled={cart.cartItems.length === 0}>Place Order</button>
                     </li>
                     {loading && <LoadingBox></LoadingBox>}
