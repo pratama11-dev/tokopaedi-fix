@@ -5,7 +5,7 @@ import { listProducts } from '../actions/productActions';
 import {
   ShoppingCartOutlined,
 } from '@ant-design/icons';
-import { listProductCategories } from '../actions/productActions';
+// import { listProductCategories } from '../actions/productActions';
 // import LoadingBox from '../components/LoadingBox';
 // import MessageBox from '../components/MessageBox';
 
@@ -25,7 +25,7 @@ function HomeScreen(props) {
 
   useEffect(() => {
     dispatch(listProducts());
-    dispatch(listProductCategories())
+    // dispatch(listProductCategories())
     return () => {
       //
     };
