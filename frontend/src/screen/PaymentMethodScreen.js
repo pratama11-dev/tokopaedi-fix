@@ -27,7 +27,7 @@ function PaymentMethodScreen(props) {
                   <li>1. Insert your PIN.</li>
                   <li>2. Select TRANSFER and click Virtual Account.</li>
                   <li>3. Enter TOKOPAEDI company code: 70001 and your Order Id <b>"{order._id}"</b>.</li>          
-                  <li>4. Enter top up amount.</li>          
+                  <li>4. Enter the Total Price</li>          
                   <li>5. Follow the next instructions to complete transaction.</li>
                 </div>
               </li>
@@ -37,7 +37,7 @@ function PaymentMethodScreen(props) {
                   <li>1. Insert your PIN.</li>
                   <li>2. Select TRANSFER and click Virtual Account.</li>
                   <li>3. Enter TOKOPAEDI company code: 70001 and your Order Id <b>"{order._id}"</b>.</li>          
-                  <li>4. Enter top up amount.</li>          
+                  <li>4. Enter the Total Price</li>          
                   <li>5. Follow the next instructions to complete transaction.</li>
                 </div>
               </li>
