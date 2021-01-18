@@ -56,7 +56,7 @@ export default function OrderListScreen(props) {
                 <td>{order._id}</td>
                 <td>{order.user.name}</td>
                 <td>{order.createdAt.substring(0, 10)}</td>
-                <td>{order.totalPrice}</td>
+                <td>Rp. {order.totalPrice}</td>
                 <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
