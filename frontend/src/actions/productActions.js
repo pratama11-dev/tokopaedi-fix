@@ -24,17 +24,17 @@ const listProducts = () => async(dispatch) => {
     }
 }
 
-export const listProductCategories = () => async (dispatch) => {
-  dispatch({
-    type: PRODUCT_CATEGORY_LIST_REQUEST,
-  });
-  try {
-    const { data } = await axios.get("/api/products/categories");
-    dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
-  } catch (error) {
-    dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: error.message });
-  }
-};
+// export const listProductCategories = () => async (dispatch) => {
+//   dispatch({
+//     type: PRODUCT_CATEGORY_LIST_REQUEST,
+//   });
+//   try {
+//     const { data } = await axios.get("/api/products/categories");
+//     dispatch({ type: PRODUCT_CATEGORY_LIST_SUCCESS, payload: data });
+//   } catch (error) {
+//     dispatch({ type: PRODUCT_CATEGORY_LIST_FAIL, payload: error.message });
+//   }
+// };
 
 const saveProduct = (product) => async (dispatch, getState) => {
   try {

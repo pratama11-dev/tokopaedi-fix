@@ -25,7 +25,7 @@ function HomeScreen(props) {
 
   useEffect(() => {
     dispatch(listProducts());
-    dispatch(listProductCategories())
+    // dispatch(listProductCategories())
     return () => {
       //
     };
