@@ -44,13 +44,13 @@ function ProductScreen(props) {
                 <div className="details-action">
                     <h2>Price: Rp. {product.price},-</h2>
                     <h3>Status: {product.countInStock > 0 ? "Ready In Stock" : "Unavailable."}</h3>
-                    <li>
+                    <p>
                         Qty: <select value={qty} onChange={(e) => { setQty(e.target.value)}}>
                             {[...Array(product.countInStock).keys()].map(x =>
                                 <option key={x + 1} value={x + 1}>{x + 1}</option>
                             )}
                         </select>
-                    </li>
+                    </p>
                     <li>
                         {product.countInStock > 0 && <button onClick={handleAddToCart} className="tombol">Add to Cart</button>}
                     </li>
