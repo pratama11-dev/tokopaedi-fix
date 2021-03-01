@@ -47,13 +47,13 @@ p{
   font-size: 12pt;
 }
 
-li{
+/* li{
   list-style-type: none;
-}
+} */
 
 ul {
   padding: 0;
-  list-style-type: none;
+  /* list-style-type: none; */
 }
 
 h2{

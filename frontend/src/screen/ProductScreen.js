@@ -38,7 +38,8 @@ function ProductScreen(props) {
                 <div className="details-info">
                     <h2><u>{product.name}</u></h2>
                     <h2>{product.brand}</h2>
-                    <p>Description: <br />{product.description}</p>
+                    <p>Description:</p>
+                    <p dangerouslySetInnerHTML={{__html:product.description}}></p>
                 </div>
                 <div className="details-action">
                     <h2>Price: Rp. {product.price},-</h2>
