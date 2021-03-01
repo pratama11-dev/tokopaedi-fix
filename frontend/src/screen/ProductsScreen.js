@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteProduct, listProducts, saveProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
-
+import { CKEditor } from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 
 function ProductsScreen(props) {
@@ -154,8 +155,9 @@ function ProductsScreen(props) {
                             <label htmlFor="description">
                                 Description
                             </label>
-                                <textarea name="description" value={description} id="description" onChange={(e) => setDescription(e.target.value)}>
-                            </textarea>
+                            <CKEditor editor={ ClassicEditor }
+                                    name="description" value={description} id="description" onChange={(e) => setDescription(e.target.value)}>
+                            </CKEditor>
                         </li>
                         <li>
                             <label htmlFor="countInStock">
