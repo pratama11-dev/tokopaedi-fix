@@ -8,6 +8,20 @@ body {
 #root{
   height: 100%;
 }
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 1fr 30rem;
+  height: 100%;
+}
+
+main {
+  grid-area: main;
+}
 
 .container {
   width: 80%;
@@ -80,7 +94,9 @@ h5{
 }
 
 header {
+  grid-area: header;
   background-color: #1c2b2d;
+  display: flex;
 }
 
 .logo img {
@@ -90,10 +106,9 @@ header {
   padding-top: 10px;
   background-color: transparent;
 }
-
 .menu a {
-  font-size: 16pt;
-  margin-top: 20px;
+  font-size: 12pt;
+  margin-top: 25px;
   margin-bottom: 0;
   padding: 5px 25px 0 0;
   float: right;
@@ -412,7 +427,7 @@ img.large {
   z-index: 1;
   background-color: #1c2b2d;
   margin: 0;
-  margin-top: 3.2rem;
+  margin-top: 3.5rem;
   border-radius: 0.3rem;
 }
 .dropdown:hover .dropdown-content {
@@ -651,6 +666,7 @@ tbody>tr:nth-child(odd){
 }
 
 .footer{
+  grid-area: footer;
   background: #1c2b2d;
   color: white;
   font-size: 14px;

@@ -46,7 +46,8 @@ function App() {
 
   return (
     <BrowserRouter>
-        <header>
+      <div className="grid-container">
+        <header className="row">
           <div className="container">
             <div className="logo">
               <Link to="/">
@@ -239,6 +240,7 @@ function App() {
             </div>
           </div>
         </footer>
+      </div>
     </BrowserRouter>
   );
 }
