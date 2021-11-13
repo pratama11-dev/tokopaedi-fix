@@ -29,7 +29,11 @@ import OrderListScreen from './screen/OrderListScreen';
 import UserListScreen from './screen/UserListScreen';
 import UserEditScreen from './screen/UserEditScreen';
 import OrderScreen from './screen/OrderScreen';
-import PaymentMethodScreen from './screen/PaymentMethodScreen'
+import KeranjangScreen from './components/KeranjangScreen';
+import HeaderBar from './components/HeaderBar';
+import HeaderMobile from './components/HeaderMobile';
+import SideBar from './components/SideBar';
+import UserPanel from './components/UserPanel';
 
 function App() {
 
@@ -46,7 +50,76 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="grid-container">
+      <div className="App">
+        <body id="kt_body" className="header-fixed header-mobile-fixed subheader-enabled subheader-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading">   
+          <HeaderMobile />
+          <div className="d-flex flex-column flex-root ">
+            <div className="d-flex flex-row flex-column-fluid page">
+              <SideBar />
+              <div className="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <HeaderBar />
+                <div className="content d-flex flex-column flex-column-fluid" id="kt_content">
+                  <main>
+                    <Route path="/products" component={ProductsScreen} />
+                    <Route path="/shipping" component={ShippingScreen} />
+                    <Route path="/payment" component={PaymentScreen} />
+                    <Route path="/placeorder" component={PlaceOrderScreen} />
+                    <Route path="/signin" component={SigninScreen} />
+                    <Route path="/register" component={RegisterScreen} />
+                    <Route path="/product/:id" component={ProductScreen} />
+                    <Route path="/cart/:id?" component={CartScreen} />
+                    <Route path="/Allscreen" component={Allscreen} />
+                    {/* <Route path="/PaymentMethodScreen" component={PaymentMethodScreen} /> */}
+                    <Route path="/" exact={true} component={HomeScreen} />
+
+                      
+                    <Route path="/order/:id" component={OrderScreen}></Route>
+                    <Route path="/orderhistory" component={OrderHistoryScreen}></Route>
+                    <Route
+                      path="/search/name/:name?"
+                      component={SearchScreen}
+                      exact
+                    ></Route>
+                    <Route
+                      path="/search/category/:category"
+                      component={SearchScreen}
+                      exact
+                    ></Route>
+                    <Route
+                      path="/search/category/:category/name/:name"
+                      component={SearchScreen}
+                      exact
+                    ></Route>
+                    <PrivateRoute
+                      path="/profile"
+                      component={ProfileScreen}
+                    ></PrivateRoute>
+                    <AdminRoute
+                      path="/productlist"
+                      component={ProductListScreen}
+                      exact
+                    ></AdminRoute>
+                    <AdminRoute
+                      path="/orderlist"
+                      component={OrderListScreen}
+                      exact
+                    ></AdminRoute>
+                    <AdminRoute path="/userlist" component={UserListScreen}></AdminRoute>
+                    <AdminRoute
+                      path="/user/:id/edit"
+                      component={UserEditScreen}
+                    ></AdminRoute>
+                  </main>
+                </div>
+              </div>
+            </div>
+          </div>
+          <UserPanel />
+          <KeranjangScreen />
+        </body>
+      </div>
+      
+      {/* <div className="grid-container">
         <header className="row">
           <div className="container">
             <div className="logo">
@@ -55,7 +128,7 @@ function App() {
               </Link>
             </div>
             <nav className="menu">
-                {userInfo ? (
+              {userInfo ? (
                 <div className="dropdown">
                   <Link to="#">
                     <UserOutlined /><p>Hi, {userInfo.name}</p>{' '}
@@ -104,9 +177,6 @@ function App() {
                 <span className="badge">{cartItems.length}</span>
               )}
               </Link>
-              {/* <a href="/#">
-                <SearchOutlined />
-              </a> */}
             </nav>
           </div>
         </header>
@@ -164,7 +234,6 @@ function App() {
         </main>
 
         <footer>
-          {/*Brand*/}
           <div className="brands">
             <div className="small-container">
               <div className="row">
@@ -196,7 +265,6 @@ function App() {
               </div>
             </div>
           </div>
-          {/*Footer*/}
           <div className="footer">
             <div className="small-container">
               <div className="row">
@@ -240,7 +308,7 @@ function App() {
             </div>
           </div>
         </footer>
-      </div>
+      </div> */}
     </BrowserRouter>
   );
 }
