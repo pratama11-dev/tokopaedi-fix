@@ -47,7 +47,7 @@ export default function UserPanel() {
 				</div>
 				<div className="separator separator-dashed mt-8 mb-5"></div>
 				<div className="navi navi-spacer-x-0 p-0">
-					<a href="/metronic/demo1/custom/apps/user/profile-1/personal-information.html" className="navi-item">
+					<a href="/" className="navi-item">
 						<div className="navi-link">
 							<div className="symbol symbol-40 bg-light mr-3">
 								<div className="symbol-label">
@@ -92,7 +92,7 @@ export default function UserPanel() {
 							</div>
 						</div>
 					</a>
-					<a href="/metronic/demo1/custom/apps/user/profile-2.html" className="navi-item">
+					<a href="/" className="navi-item">
 						<div className="navi-link">
 							<div className="symbol symbol-40 bg-light mr-3">
 								<div className="symbol-label">

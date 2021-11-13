@@ -3,7 +3,7 @@ import React from 'react'
 export default function HeaderMobile() {
   return (
     <div id="kt_header_mobile" className="header-mobile align-items-center header-mobile-fixed">
-			<a href="/metronic/demo1/index.html">
+			<a href="/">
 				<img className="w-100px" alt="Logo" src="../img/paedyputih.png" />
 			</a>
 			<div className="d-flex align-items-center">
