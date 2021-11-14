@@ -2,9 +2,6 @@ import React, {useEffect}from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { listProducts } from '../actions/productActions';
-import {
-  ShoppingCartOutlined,
-} from '@ant-design/icons';
 import { listProductCategories } from '../actions/productActions';
 // import LoadingBox from '../components/LoadingBox';
 // import MessageBox from '../components/MessageBox';
@@ -257,7 +254,7 @@ function HomeScreen(props) {
                     <div className="card-body rounded p-0 d-flex bg-light">
                       <div className="d-flex flex-column flex-lg-row-auto w-auto w-lg-350px w-xl-450px w-xxl-650px py-10 py-md-14 px-10 px-md-20 pr-lg-0">
                         <h1 className="font-weight-bolder text-dark mb-0">Search Goods</h1>
-                        <div className="font-size-h4 mb-8">Get Amazing Gadgets</div>
+                        <div className="font-size-h4 mb-8">Get Amazing Stuff</div>
                         <form className="d-flex flex-center py-2 px-6 bg-white rounded">
                           <span className="svg-icon svg-icon-lg svg-icon-primary">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -276,7 +273,7 @@ function HomeScreen(props) {
                   </div>
                   <div className="d-flex flex-row">
                     {products.slice(4,6).map((product) => (<>
-                      <div className="col-md-6 col-lg-6 col-xxl-6 h-100" key={product._id}>
+                      <div className="col-md-6 col-lg-6 col-xxl-6" key={product._id}>
                         <Link to={'/product/' + product._id}>
                           <div className="card card-custom card-stretch gutter-b overflow-hidden">
                             <div className="card-body p-0 d-flex rounded bg-light-success">
@@ -284,7 +281,7 @@ function HomeScreen(props) {
                                 <h3 className="font-size-h1">
                                   <a href={`/product/${product._id}`} className="text-dark font-weight-bolder">{product.name}</a>
                                 </h3>
-                                <div className="font-size-h4 text-success">{product.description}</div>
+                                <div className="font-size-h4 text-success" dangerouslySetInnerHTML={{__html:product.description}}></div>
                               </div>
                               <img src={product.img} alt={product.name} className="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left mw-50 w-100px" style={{transform: "rotate(26deg)"}}/>
                             </div>

@@ -21,7 +21,7 @@ export default function HeaderBar() {
           <div id="kt_header_menu" className="header-menu header-menu-mobile header-menu-layout-default">
             <ul className="menu-nav">
               <li className="menu-item">
-                <span className="font-weight-bolder font-size-h4 font-size-lg-h2">Toko Tokoan</span>
+                <a href="/" className="font-weight-bolder font-size-h4 font-size-lg-h2">Toko Tokoan</a>
               </li>
             </ul>
           </div>
@@ -104,7 +104,7 @@ export default function HeaderBar() {
                     </li>
                   </ul>
                 </div>
-                  `<div className="tab-content">
+                  <div className="tab-content">
                     <div className="tab-pane active show p-8" id="topbar_notifications_notifications" role="tabpanel">
                       <div className="scroll pr-7 mr-n7 ps" data-scroll="true" data-height="300" data-mobile-height="200" style={{height: "300px", overflow: "hidden"}}>
                         <div className="d-flex align-items-center mb-6">
@@ -439,7 +439,7 @@ export default function HeaderBar() {
               </div>
             ) :(
               <Link to="/signin">
-                <div className="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2" id="kt_quick_user_toggle">
+                <div className="btn btn-icon btn-icon-mobile w-auto btn-clean d-flex align-items-center btn-lg px-2">
                   <span className="text-muted font-weight-bold font-size-base d-none d-md-inline mr-1">Sign In</span>
                 </div>
               </Link>
