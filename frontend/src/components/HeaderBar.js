@@ -416,6 +416,7 @@ export default function HeaderBar() {
             </div>
           </div>
           <div className="topbar-item">
+            {/* <div className="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_cart_toggle"> */}
             <div className="btn btn-icon btn-clean btn-dropdown btn-lg mr-1" id="kt_quick_cart_toggle">
               <span className="svg-icon svg-icon-xl svg-icon-primary">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

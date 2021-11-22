@@ -46,11 +46,11 @@ function Allscreen(props) {
                   </Link>
                 </div>
                 <div className="my-4">
-                  <a href="#" className="text-dark font-weight-bold text-hover-primary font-size-h4">{product.name}</a>
+                  <a href={'/product/' + product._id} className="text-dark font-weight-bold text-hover-primary font-size-h4">{product.name}</a>
                 </div>
                 <span className="btn btn-text btn-light-warning btn-sm font-weight-bold">{product.brand}</span>
                 <div className="mt-9">
-                  <a href="#" className="btn btn-light-primary font-weight-bolder btn-sm py-3 px-6 text-uppercase">Rp.{product.price}</a>
+                  <a href={'/product/' + product._id} className="btn btn-light-primary font-weight-bolder btn-sm py-3 px-6 text-uppercase">Rp.{product.price}</a>
                 </div>
               </div>
             </div>

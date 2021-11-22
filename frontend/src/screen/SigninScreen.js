@@ -111,8 +111,8 @@ function SigninScreen(props) {
 									<input className="form-control h-auto text-white bg-white-o-5 rounded-pill border-0 py-4 px-8" type="text" placeholder="Email" name="email" autocomplete="off" />
 								<div className="fv-plugins-message-container"></div></div>
 								<div className="form-group">
-									<button id="kt_login_forgot_submit" class="btn btn-pill btn-primary opacity-90 px-15 py-3 m-2">Request</button>
-									<button id="kt_login_forgot_cancel" class="btn btn-pill btn-outline-white opacity-70 px-15 py-3 m-2">Cancel</button>
+									<button id="kt_login_forgot_submit" className="btn btn-pill btn-primary opacity-90 px-15 py-3 m-2">Request</button>
+									<button id="kt_login_forgot_cancel" className="btn btn-pill btn-outline-white opacity-70 px-15 py-3 m-2">Cancel</button>
 								</div>
 							<div></div></form>
 						</div>

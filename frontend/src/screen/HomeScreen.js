@@ -277,13 +277,17 @@ function HomeScreen(props) {
                         <Link to={'/product/' + product._id}>
                           <div className="card card-custom card-stretch gutter-b overflow-hidden">
                             <div className="card-body p-0 d-flex rounded bg-light-success">
-                              <div className="py-25 px-12 d-flex align-items-center flex-column">
+                              <div className="py-25 px-12 d-flex align-items-center flex-column flex-grow-1">
                                 <h3 className="font-size-h1">
-                                  <a href={`/product/${product._id}`} className="text-dark font-weight-bolder">{product.name}</a>
+                                  <a href={`/product/${product._id}`} className="text-dark font-weight-bolder text-left">{product.name}</a>
                                 </h3>
-                                <div className="font-size-h4 text-success" dangerouslySetInnerHTML={{__html:product.description}}></div>
+                                <div className="font-size-h4 text-success text-left" dangerouslySetInnerHTML={{__html:product.description}}></div>
                               </div>
-                              <img src={product.img} alt={product.name} className="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left mw-50 w-100px" style={{transform: "rotate(26deg)"}}/>
+                              <div className="d-flex align-items-center">
+                                <a href={`/product/${product._id}`}>
+                                  <img src={product.img} alt={product.name} className="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left mw-50 w-200px" style={{transform: "rotate(26deg)"}}/>
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </Link>
@@ -296,7 +300,9 @@ function HomeScreen(props) {
                         <div className="card card-custom gutter-b card-stretch">
                           <div className="card-body d-flex flex-column rounded bg-light justify-content-between">
                             <div className="text-center rounded mb-7">
-                              <img src={product.img} alt={product.name} className="mw-100 w-200px"/>
+                              <a href={`/product/${product._id}`}>
+                                <img src={product.img} alt={product.name} className="mw-100 w-200px"/>
+                              </a>
                             </div>
                             <div>
                               <h4 className="font-size-h5">
