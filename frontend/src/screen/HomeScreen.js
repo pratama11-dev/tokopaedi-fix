@@ -308,7 +308,7 @@ function HomeScreen(props) {
                               <h4 className="font-size-h5">
                                 <a href={`/product/${product._id}`} className="text-dark-75 font-weight-bolder">{product.name}</a>
                               </h4>
-                              <div className="font-size-h6 text-muted font-weight-bolder">{product.price}</div>
+                              <div className="font-size-h6 text-muted font-weight-bolder">Rp. {product.price},-</div>
                             </div>
                           </div>
                         </div>

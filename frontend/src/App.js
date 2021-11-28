@@ -7,13 +7,6 @@ import HomeScreen from './screen/HomeScreen'
 import ProductScreen from './screen/ProductScreen'
 import Allscreen from './screen/AllScreen'
 import CartScreen from './screen/CartScreen';
-import {
-  UserOutlined,
-  ShoppingCartOutlined,
-  SearchOutlined,
-  InstagramOutlined,
-  ProfileOutlined
-} from '@ant-design/icons';
 import { useSelector,useDispatch } from 'react-redux';
 import SigninScreen from './screen/SigninScreen';
 import RegisterScreen from './screen/RegisterScreen';
@@ -55,8 +48,8 @@ function App() {
           <HeaderMobile />
           <div className="d-flex flex-column flex-root ">
             <div className="d-flex flex-row flex-column-fluid page">
-              <SideBar />
               <div className="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+                <SideBar />
                 <HeaderBar />
                 <div className="content d-flex flex-column flex-column-fluid" id="kt_content">
                   <main>

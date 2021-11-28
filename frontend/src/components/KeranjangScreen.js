@@ -45,7 +45,6 @@ export default function KeranjangScreen(props) {
 							<div className="d-flex align-items-center justify-content-between py-8" key={item.product}>
 								<div className="d-flex flex-column mr-2">
 									<a href={"/product/" + item.product} className="font-weight-bold text-dark-75 font-size-lg text-hover-primary text-left">{item.name}</a>
-									<span className="text-muted">The best kitchen gadget in 2020</span>
 									<div className="d-flex align-items-center mt-2">
 										<span className="font-weight-bold mr-1 text-dark-75 font-size-lg">Rp. {item.price},-</span>
 										<span className="text-muted mr-1">for</span>
