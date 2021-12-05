@@ -21,7 +21,9 @@ export default function HeaderBar() {
           <div id="kt_header_menu" className="header-menu header-menu-mobile header-menu-layout-default">
             <ul className="menu-nav">
               <li className="menu-item">
-                <a href="/" className="font-weight-bolder font-size-h4 font-size-lg-h2">Toko Tokoan</a>
+                <a href="/" className="brand-logo">
+                  <img className="w-150px" alt="Logo" src="../img/paedyputih.png" />
+                </a>
               </li>
             </ul>
           </div>

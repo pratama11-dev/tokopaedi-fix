@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteOrder, listOrders } from '../actions/orderAction';
-import LoadingBox from '../components/LoadingBox';
-import MessageBox from '../components/MessageBox';
-import { ORDER_DELETE_RESET } from '../constants/orderConstant';
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteOrder, listOrders } from "../actions/orderAction";
+import LoadingBox from "../components/LoadingBox";
+import MessageBox from "../components/MessageBox";
+import { ORDER_DELETE_RESET } from "../constants/orderConstant";
 
 export default function OrderListScreen(props) {
   const orderList = useSelector((state) => state.orderList);
@@ -15,21 +15,21 @@ export default function OrderListScreen(props) {
     success: successDelete,
   } = orderDelete;
 
-  const sellerMode = props.match.path.indexOf('/seller') >= 0;
+  const sellerMode = props.match.path.indexOf("/seller") >= 0;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch({ type: ORDER_DELETE_RESET });
-    dispatch(listOrders({ seller: sellerMode ? userInfo._id : '' }));
+    dispatch(listOrders({ seller: sellerMode ? userInfo._id : "" }));
   }, [dispatch, sellerMode, successDelete, userInfo._id]);
   const deleteHandler = (order) => {
-    if (window.confirm('Are you sure to delete?')) {
+    if (window.confirm("Are you sure to delete?")) {
       dispatch(deleteOrder(order._id));
     }
   };
   return (
-    <div className="content content-margined">
+    <div className="container-fluid">
       <h1>Orders</h1>
       {loadingDelete && <LoadingBox></LoadingBox>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
@@ -39,7 +39,7 @@ export default function OrderListScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <table className="table">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>ID</th>
               <th>USER</th>
@@ -60,18 +60,18 @@ export default function OrderListScreen(props) {
                 <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
-                    : 'No'}
+                    : "No"}
                 </td>
                 {/* <td>{order.isPaid ? order.paidAt.substring(0, 10) : 'No'}</td> */}
                 <td>
                   {order.isDelivered
                     ? order.deliveredAt.substring(0, 10)
-                    : 'No'}
+                    : "No"}
                 </td>
                 <td>
                   <button
                     type="button"
-                    className="buttontbl"
+                    className="btn btn-success mr-3"
                     onClick={() => {
                       props.history.push(`/order/${order._id}`);
                     }}
@@ -80,7 +80,7 @@ export default function OrderListScreen(props) {
                   </button>
                   <button
                     type="button"
-                    className="buttontbl"
+                    className="btn btn-danger"
                     onClick={() => deleteHandler(order)}
                   >
                     Delete

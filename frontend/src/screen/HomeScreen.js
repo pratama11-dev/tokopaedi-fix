@@ -34,7 +34,7 @@ function HomeScreen(props) {
       <div className="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
         <div className="d-flex align-items-center flex-wrap mr-1">
           <div className="d-flex align-items-baseline flex-wrap mr-5">
-            <h5 className="text-dark font-weight-bold my-1 mr-5">Product</h5>
+            <h5 className="text-dark font-weight-bold my-1 mr-5">Home Screen</h5>
             {/* <ul className="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
               <li className="breadcrumb-item text-muted"><a className="text-muted" href="">Overall Ship</a></li>
             </ul> */}
@@ -271,9 +271,9 @@ function HomeScreen(props) {
                       <div className="d-none d-md-flex flex-row-fluid bgi-no-repeat bgi-position-y-center bgi-position-x-left bgi-size-cover" style={{backgroundImage: "url(https://metronic-assets.s3-ap-southeast-1.amazonaws.com/media/svg/illustrations/copy.svg)"}}></div>
                     </div>
                   </div>
-                  <div className="d-flex flex-row">
+                  <div className="d-flex flex-row flex-wrap">
                     {products.slice(4,6).map((product) => (<>
-                      <div className="col-md-6 col-lg-6 col-xxl-6" key={product._id}>
+                      <div className="col-md-12 col-lg-6 col-xxl-6" key={product._id}>
                         <Link to={'/product/' + product._id}>
                           <div className="card card-custom card-stretch gutter-b overflow-hidden">
                             <div className="card-body p-0 d-flex rounded bg-light-success">

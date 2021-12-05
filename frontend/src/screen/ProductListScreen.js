@@ -61,7 +61,7 @@ export default function ProductListScreen(props) {
     dispatch(createProduct());
   };
   return (
-    <div>
+    <div className="container-fluid">
       <div className="row">
         <h4>Products</h4>
         <button type="button" className="primary" onClick={createHandler}>
@@ -110,7 +110,7 @@ export default function ProductListScreen(props) {
                   </button>
                   <button
                     type="button"
-                    className="btn"
+                    className="btn btn-danger"
                     onClick={() => deleteHandler(product)}
                   >
                     Delete

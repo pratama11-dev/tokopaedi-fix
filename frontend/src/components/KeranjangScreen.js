@@ -38,7 +38,7 @@ export default function KeranjangScreen(props) {
 				<div className="offcanvas-wrapper mb-5 scroll-pull scroll" style={{height: "auto", overflow: "hidden"}}>
 					{cartItems.length === 0 ?
 						<div>
-							<h6 class="font-weight-bolder text-dark font-size-h6 m-2">Cart is Empty</h6>
+							<h6 className="font-weight-bolder text-dark font-size-h6 m-2">Cart is Empty</h6>
 						</div>
 						: 
 						cartItems.map( item =>

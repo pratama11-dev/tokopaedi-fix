@@ -12,7 +12,7 @@ export default function OrderHistoryScreen(props) {
     dispatch(listOrderMine());
   }, [dispatch]);
   return (
-    <div className="content content-margined">
+    <div className="container-fluid">
       <h1>Order History</h1>
       {loading ? (
         <LoadingBox></LoadingBox>
@@ -20,7 +20,7 @@ export default function OrderHistoryScreen(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <table className="table">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>ID</th>
               <th>DATE</th>
@@ -50,7 +50,7 @@ export default function OrderHistoryScreen(props) {
                 <td>
                   <button
                     type="button"
-                    className="buttontbl"
+                    className="btn btn-success"
                     onClick={() => {
                       props.history.push(`/order/${order._id}`);
                     }}
